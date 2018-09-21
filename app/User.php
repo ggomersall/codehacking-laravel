@@ -33,6 +33,9 @@ class User extends Authenticatable
     }
 
     public function photo() {
-        return $this->belongsTo('App\Photo');
+        // we have to set the second parameter 'profile_image'
+        // because we didn't use default naming of 'photo_id'
+        return $this->belongsTo('App\Photo', 'profile_image');  
+        
     }
 }
