@@ -49,6 +49,12 @@
                                 @endif
                             </li>
                         @else
+                            @if (Auth::user()->role->name === "admin")
+                                <li class="nav-tem">
+                                    <a href="{{route('users.index')}}" class="nav-link">Admin</a>
+                                </li>
+                                
+                            @endif
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -66,6 +72,7 @@
                                     </form>
                                 </div>
                             </li>
+                            
                         @endguest
                     </ul>
                 </div>
