@@ -49,11 +49,11 @@
                                 @endif
                             </li>
                         @else
-                            @if (Auth::user()->role->name === "admin")
+                            @if (Auth::user()->role && Auth::user()->role->name === "admin")
                                 <li class="nav-tem">
                                     <a href="{{route('users.index')}}" class="nav-link">Admin</a>
                                 </li>
-                            @else
+                            
                             @endif
 
                             <li class="nav-item dropdown">
@@ -63,8 +63,8 @@
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                                        onclick="event.preventDefault();
+                                        document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
