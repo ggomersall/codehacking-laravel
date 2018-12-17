@@ -2,9 +2,10 @@
 
 @section('content')
     <h2>Create User</h2>
+    <div class="row">
 
-    {!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
-
+        {!! Form::open(['method'=>'POST', 'action'=>'AdminUsersController@store', 'files'=>true]) !!}
+        
         <div class="form-group">
             {!! Form::label('name', 'Name') !!}
             {!! Form::text('name', null, ['class'=>'form-control']) !!}
@@ -29,11 +30,14 @@
             {!! Form::label('profile_image', 'Profile Picture') !!}
             {!! Form::file('profile_image', null, ['class'=>'form-control']) !!}
         </div>
-
+        
         <div class="form-group">
             {!! Form::submit('Create User', ['class'=> 'btn btn-primary']) !!}
         </div>
-    {!! Form::close() !!}
+        {!! Form::close() !!}
+    </div>
+    <div class="row">
+        @include('includes.form_error')
+    </div>
 
-    @include('includes.form_error')
 @endsection

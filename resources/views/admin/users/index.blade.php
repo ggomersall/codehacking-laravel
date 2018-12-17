@@ -8,16 +8,16 @@
     <div class="table__wrapper">
         <table class="table table-striped">
             <thead>
-            <tr>
-                <th>ID</th>
-                <th>Photo</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Role</th>
-                <th>Is Active</th>
-                <th>Created</th>
-                <th>Updated</th>
-            </tr>
+                <tr>
+                    <th>ID</th>
+                    <th>Photo</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Is Active</th>
+                    <th>Created</th>
+                    <th>Updated</th>
+                </tr>
             </thead>
             <tbody>
                 @if($users)
