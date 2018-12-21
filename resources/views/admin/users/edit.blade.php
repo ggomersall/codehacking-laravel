@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+    @include('includes.back_button')
     <h2>Create User</h2>
     <div class="col-sm-12">
         @include('includes.form_error')

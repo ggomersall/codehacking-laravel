@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 
 @section('content')
+    @include('includes.back_button')
     <h2>Edit Posts</h2>
 
     <div class="col-sm-3">
