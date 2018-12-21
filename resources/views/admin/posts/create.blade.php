@@ -2,6 +2,7 @@
 
 @section('content')
     <h2>Create Posts</h2>
+    @include('includes.tinyeditor')
     {!! Form::open(['method' => 'POST', 'action'=>'AdminPostsController@store', 'files'=>true]) !!}
         <div class="form-group">
             {!! Form::label('title', 'Title') !!}
